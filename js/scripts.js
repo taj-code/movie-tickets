@@ -1,6 +1,6 @@
 // Business logic for Ticket
 
-function Ticket(name, age, time) {
+function Ticket (name, age, time) {
   this.name = name;
   this.age = age;
   this.time = time;
@@ -45,8 +45,25 @@ function movieRating (rating, age) {
   }
 }
 
+function ticketPrice (movie, ticket) {
+  let price = 10;
+  let time = ticket.time;
+  if (time === "12:00"){
+    price -= 3;
+  } else {
+    return price;
+  }
+}
 
 
+function ticketPrice (time) {
+  let price = 10;
+  if (time === "12:00"){
+    return price -= 3;
+  } else {
+    return price;
+  }
+}
 // Ticket.prototype.selectedTime = function() {
 //   if (this.time === "12:00" || this.time === "4:00" || this.time === "7:00") {
 

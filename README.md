@@ -30,3 +30,14 @@ Test: If somebody is 17, they cannot see an R-rated movie
 Code: canSeeMovie('R', 17)
 Expected result: false
 ```
+```
+Describe: ticketPrice (time)
+Test: Default ticket price should be 10.
+Code: ticketPrice("4:00")
+Expected: 10
+```
+Describe: ticketPrice (time)
+Test: Should reduce ticket price by 3 if movie time is 12:00.
+Code: ticketPrice("12:00")
+Expected: 7
+```
