@@ -45,27 +45,18 @@ function movieRating (rating, age) {
   }
 }
 
-function ticketPrice (movie, ticket) {
+function ticketPrice (age, time) {
   let price = 10;
-  let time = ticket.time;
-  if (time === "12:00"){
-    price -= 3;
-  } else {
-    return price;
-  }
-}
-
-
-function ticketPrice (time) {
-  let price = 10;
-  if (time === "12:00"){
+  if (age >=55 && time === "12:00"){
+    return price -= 6;
+  } else if (time === "12:00"){
     return price -= 3;
+ } else if (age >=55){
+    return price -= 5;
   } else {
     return price;
   }
 }
-// Ticket.prototype.selectedTime = function() {
-//   if (this.time === "12:00" || this.time === "4:00" || this.time === "7:00") {
 
-//   }
-// }
+// UI Logic
+

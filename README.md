@@ -41,3 +41,15 @@ Test: Should reduce ticket price by 3 if movie time is 12:00.
 Code: ticketPrice("12:00")
 Expected: 7
 ```
+```
+Describe: ticketPrice (age)
+Test: Should reduce ticket price by 5 if age is 55 and over.
+Code: ticketPrice(55)
+Expected: 5
+```
+```
+Describe: ticketPrice (age, time)
+Test: Should reduce ticket price by 6 if age is 55 and over AND show time is 12:00.
+Code: ticketPrice("55", "12:00")
+Expected: 4
+```
