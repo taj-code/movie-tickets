@@ -1,10 +1,9 @@
 // Business logic for Ticket
 
-function Ticket(name, age, time, price) {
+function Ticket(name, age, time) {
   this.name = name;
   this.age = age;
   this.time = time;
-  this.price= price;
 }
 
 
@@ -14,21 +13,18 @@ const movies = [
     rating: "R",
     firstRelease: false,
     times: ["12:00", "4:00", "7:00"],
-    price: "10",
   },
   {
     name: "DeadPool",
     rating: "R",
     firstRelease: false,
     times: ["12:00", "4:00", "7:00"],
-    price: "10",
   },
   {
     name: "Free Guy",
     rating: "PG-13",
     firstRelease: true,
     times: ["4:00", "7:00"],
-    price: "10",
   }
 ]
 
@@ -40,6 +36,15 @@ function movieResult (movieName) {
     }
   }
 }
+
+function movieRating (rating, age) {
+  if (rating === "R" && age >= "18"){
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
 
 // Ticket.prototype.selectedTime = function() {
